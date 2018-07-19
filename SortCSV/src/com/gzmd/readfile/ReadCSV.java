@@ -39,6 +39,7 @@ public class ReadCSV {
 			br.readLine();// 处理掉行头
 //			String[] arrayCombine;
 			while ((line = br.readLine().replace("\"", "")) != null) {
+				boolean flag = true;
 				newLine = line.split(",");
 				if (newLine.length < 44) {
 					br.readLine();
@@ -53,7 +54,13 @@ public class ReadCSV {
 				ei.setQYMC(newLine[2]);
 				ei.setZS(newLine[3]);
 				ei.setFDDBR(newLine[4]);
-				ei.setZCZB(Double.parseDouble(newLine[5]));//double类型
+				if ((newLine[5] == null) || (newLine[5] == "") || ("".equals(newLine[5])) || (!(newLine[5].matches("^[-+]?(([0-9]+)([.]([0-9]+))?|([.]([0-9]+))?)$")))) {
+					ei.setZCZB(0.0);
+					flag = false;
+				}
+				if (flag) {
+					ei.setZCZB(Double.parseDouble(newLine[5]));//double类型
+				}
 				ei.setBZ(newLine[6]);
 				ei.setQYLX(newLine[7]);
 				ei.setLXDH(newLine[8]);
@@ -100,7 +107,7 @@ public class ReadCSV {
 				list.add(ei);
 				
 				lineNum++;
-				if (lineNum == 10)
+				if (lineNum == 1000)
 					break;
 			}
 		} catch (FileNotFoundException e) {

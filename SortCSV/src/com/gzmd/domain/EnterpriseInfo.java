@@ -3,7 +3,7 @@ package com.gzmd.domain;
 public class EnterpriseInfo {
 	
 	/**
-	 * 企业信息,38+6个
+	 * 企业信息实体类,38+6个字段
 	 */
 	private String NBXH;//*内部序号
 	private String ZCH;//注册号
