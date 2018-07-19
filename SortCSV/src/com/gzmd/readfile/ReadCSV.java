@@ -22,22 +22,22 @@ import com.gzmd.sort.BubbleSort;
  * @author Meran
  *
  */
-public class ReadCVS {
+public class ReadCSV {
 
 	FileReader fr;
 	BufferedReader br;
 	List<EnterpriseInfo> list;
-	public void readFile() {
+	public List<EnterpriseInfo> readFile() {
 		 list= new LinkedList<EnterpriseInfo>(); 
 		try {
-			fr = new FileReader("D:\\A_QYZT.csv");
+			fr = new FileReader("E:\\A_QYZT.csv");
 			br = new BufferedReader(fr);
 			EnterpriseInfo ei;
 			String line = null;
 			int lineNum = 0;
 			String[] newLine = null;
 			br.readLine();// 处理掉行头
-			String[] arrayCombine;
+//			String[] arrayCombine;
 			while ((line = br.readLine().replace("\"", "")) != null) {
 				newLine = line.split(",");
 				if (newLine.length < 44) {
@@ -109,8 +109,9 @@ public class ReadCVS {
 			e.printStackTrace();
 		}
 		
-		BubbleSort bs = new BubbleSort();
-		bs.bubbleSort(list);
+		return list;
+//		BubbleSort bs = new BubbleSort();
+//		bs.bubbleSort(list);
 	}
 
 
