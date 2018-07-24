@@ -54,8 +54,7 @@ public class BubbleSort {
 		// Object temp = null;
 		// for (int i = 0; i < objs.length -1; i++) {
 		// for (int j = 0; j < objs.length - 1 - i; j++) {
-		// if(((EnterpriseInfo)objs[j]).getZCZB() > ((EnterpriseInfo)objs[j +
-		/////////////////////////////////////////////////////////////////////////////// 1]).getZCZB()){
+		// if(((EnterpriseInfo)objs[j]).getZCZB() > ((EnterpriseInfo)objs[j + 1]).getZCZB()){
 		// temp = objs[j];
 		// objs[j] = objs[j + 1];
 		// objs[j + 1] = temp;
@@ -63,9 +62,7 @@ public class BubbleSort {
 		// }
 		// }
 		// for (int i = 0; i < objs.length; i++) {
-		// System.out.println(((EnterpriseInfo) objs[i]).getZCZB() + "\t" +
-		/////////////////////////////////////////////////////////////////////////////// ((EnterpriseInfo)
-		/////////////////////////////////////////////////////////////////////////////// objs[i]).getQYMC());
+		// System.out.println(((EnterpriseInfo) objs[i]).getZCZB() + "\t" + ((EnterpriseInfo)objs[i]).getQYMC());
 		// }
 		// return objs;
 		///////////////////////////////////////////////////////////////////////////////
@@ -76,7 +73,7 @@ public class BubbleSort {
 		WriteCSV wc = new WriteCSV();
 		List<EnterpriseInfo> list = rc.readFile();
 		List sortedList = bubbleSort(list);
-		wc.writeFile(sortedList);
+//		wc.writeFile(sortedList);
 	}
 }
 

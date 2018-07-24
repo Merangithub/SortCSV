@@ -318,63 +318,55 @@ public class EnterpriseInfo {
 	public void setZSXZQH(String zSXZQH) {
 		ZSXZQH = zSXZQH;
 	}
+	
+	
 	/**
 	 * ¹¹Ôìº¯Êý
 	 */
-	public EnterpriseInfo(){
-		
-	}
-	
-	public EnterpriseInfo(String nBXH, String zCH, String qYMC, String zS, String fDDBR, double zCZB, String bZ,
-			String qYLX, String lXDH, String jYFW, String cLRQ, String nJJG, String nJND, String dJJG, String jYFS,
-			String yYRQ1, String yYRQ2, String xYDJ, String dJRQ, String sFHMD, String qYBZ, String bY1, String bY2,
-			String bY3, String mCLX, String hYDM, String gXDW, String qZJYFW, String yBJYFW, String dZYX, String lCBZ,
-			String fXD, String oPTYPE, String hZRQ, String zXRQ, String dXRQ, String vALI, String hYML, String uNISCID,
-			String yIEDISTRICT, String pROLOC, String iNSERT_TIME, String uPDATE_TIME, String zSXZQH) {
-		super();
-		NBXH = nBXH;
-		ZCH = zCH;
-		QYMC = qYMC;
-		ZS = zS;
-		FDDBR = fDDBR;
-		ZCZB = zCZB;
-		BZ = bZ;
-		QYLX = qYLX;
-		LXDH = lXDH;
-		JYFW = jYFW;
-		CLRQ = cLRQ;
-		NJJG = nJJG;
-		NJND = nJND;
-		DJJG = dJJG;
-		JYFS = jYFS;
-		YYRQ1 = yYRQ1;
-		YYRQ2 = yYRQ2;
-		XYDJ = xYDJ;
-		DJRQ = dJRQ;
-		SFHMD = sFHMD;
-		QYBZ = qYBZ;
-		BY1 = bY1;
-		BY2 = bY2;
-		BY3 = bY3;
-		MCLX = mCLX;
-		HYDM = hYDM;
-		GXDW = gXDW;
-		QZJYFW = qZJYFW;
-		YBJYFW = yBJYFW;
-		DZYX = dZYX;
-		LCBZ = lCBZ;
-		FXD = fXD;
-		OPTYPE = oPTYPE;
-		HZRQ = hZRQ;
-		ZXRQ = zXRQ;
-		DXRQ = dXRQ;
-		VALI = vALI;
-		HYML = hYML;
-		UNISCID = uNISCID;
-		YIEDISTRICT = yIEDISTRICT;
-		PROLOC = pROLOC;
-		INSERT_TIME = iNSERT_TIME;
-		UPDATE_TIME = uPDATE_TIME;
-		ZSXZQH = zSXZQH;
+	public EnterpriseInfo() {
+		NBXH = null;
+		ZCH = null;
+		QYMC = null;
+		ZS = null;
+		FDDBR = null;
+		ZCZB = 0.0;
+		BZ = null;
+		QYLX = null;
+		LXDH = null;
+		JYFW = null;
+		CLRQ = null;
+		NJJG = null;
+		NJND = null;
+		DJJG = null;
+		JYFS = null;
+		YYRQ1 = null;
+		YYRQ2 = null;
+		XYDJ = null;
+		DJRQ = null;
+		SFHMD = null;
+		QYBZ = null;
+		BY1 = null;
+		BY2 = null;
+		BY3 = null;
+		MCLX = null;
+		HYDM = null;
+		GXDW = null;
+		QZJYFW = null;
+		YBJYFW = null;
+		DZYX = null;
+		LCBZ = null;
+		FXD = null;
+		OPTYPE = null;
+		HZRQ = null;
+		ZXRQ = null;
+		DXRQ = null;
+		VALI = null;
+		HYML = null;
+		UNISCID = null;
+		YIEDISTRICT = null;
+		PROLOC = null;
+		INSERT_TIME = null;
+		UPDATE_TIME = null;
+		ZSXZQH = null;
 	}
 }
