@@ -7,6 +7,9 @@ import com.gzmd.domain.EnterpriseInfo;
 import com.gzmd.readfile.ReadCSV;
 import com.gzmd.sort.BubbleSort;
 import com.gzmd.sort.MergeSort;
+import com.gzmd.sort.QuickSort;
+import com.gzmd.test.PrintTest;
+import com.gzmd.writesortedfile.WriteCSV;
 
 public class Main {
 	
@@ -18,9 +21,15 @@ public class Main {
 	public static void main(String[] args) {
 		ReadCSV rc = new ReadCSV();
 		LinkedList<EnterpriseInfo> list = rc.readFile();
-		new MergeSort().sort(list, HZRQ);
+		PrintTest pt = new PrintTest();
 		
-//		new BubbleSort().test();
+		Object[] obj = new MergeSort().sort(list, HZRQ);
+		pt.printArray(obj);
+//		new WriteCSV().writeFileByArr(obj);
 		
+		
+//		QuickSort qs = new QuickSort();
+//		LinkedList<EnterpriseInfo> list1 = qs.quickSort(list, 0, list.size() - 1);
+//		new PrintTest().printList(list1);
 	}
 }

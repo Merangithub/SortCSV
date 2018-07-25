@@ -71,17 +71,17 @@ public class ReadCSV {
 				ei = new EnterpriseInfo();
 
 				if (!(newLine[0] == null || newLine[0] == "" || "".equals(newLine[0])))
-					ei.setNBXH(newLine[0].substring(1));									/*****************************/
+					ei.setNBXH(newLine[0].substring(1));									/**************内部序号***************/
 				if (!(newLine[1] == null || newLine[1] == "" || "".equals(newLine[1])))
 					ei.setZCH(newLine[1]);
 				if (!(newLine[2] == null || newLine[2] == "" || "".equals(newLine[2])))
-					ei.setQYMC(newLine[2]);													/*****************************/
+					ei.setQYMC(newLine[2]);													/**************企业名称***************/
 				if (!(newLine[3] == null || newLine[3] == "" || "".equals(newLine[3])))
 					ei.setZS(newLine[3]);
 				if (!(newLine[4] == null || newLine[4] == "" || "".equals(newLine[4])))
 					ei.setFDDBR(newLine[4]);
 				if (!(newLine[5] == null || newLine[5] == "" || "".equals(newLine[5])))
-					ei.setZCZB(Double.parseDouble(newLine[5]));// double类型					/*****************************/
+					ei.setZCZB(Double.parseDouble(newLine[5]));// double类型					/**************注册资本***************/
 				if (!(newLine[6] == null || newLine[6] == "" || "".equals(newLine[6])))
 					ei.setBZ(newLine[6]);
 				if (!(newLine[7] == null || newLine[7] == "" || "".equals(newLine[7])))
@@ -139,8 +139,11 @@ public class ReadCSV {
 					ei.setFXD(newLine[31]);
 				if (!(newLine[32] == null || newLine[32] == "" || "".equals(newLine[32])))
 					ei.setOPTYPE(newLine[32]);
-				if (!(newLine[33] == null || newLine[33] == "" || "".equals(newLine[33])))
-					ei.setHZRQ(newLine[33]);												/*****************************/
+				if (!(newLine[33] == null || newLine[33] == "" || "".equals(newLine[33]))) {
+					ei.setHZRQ(newLine[33]);												/**************核准日期***************/
+				} else {
+					ei.setHZRQ("9999/99/99");
+				}
 				if (!(newLine[34] == null || newLine[34] == "" || "".equals(newLine[34])))
 					ei.setZXRQ(newLine[34]);
 				if (!(newLine[35] == null || newLine[35] == "" || "".equals(newLine[35])))

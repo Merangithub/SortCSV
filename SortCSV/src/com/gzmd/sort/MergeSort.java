@@ -22,17 +22,12 @@ public class MergeSort {
 		Object[] arr = list.toArray();//把集合变成数组
 		
 		Object[] temp = new Object[arr.length];//先建立一个长度等于元数组长度的临时数组，避免递归过程中频繁开辟空间
-//		LinkedList<EnterpriseInfo> temp = new LinkedList<EnterpriseInfo>();
 		System.out.println("排序后：");
 		long startTime = System.currentTimeMillis(); // 获取开始时间
 		
 		sort(arr, 0, arr.length - 1, temp, column);
 		
 		long endTime = System.currentTimeMillis(); // 获取结束时间
-		for (Object o : temp) {
-			System.out.println(((EnterpriseInfo)o).getZCZB() + "\t" + ((EnterpriseInfo)o).getQYMC() + "\t" + ((EnterpriseInfo)o).getNBXH()+ "\t" + ((EnterpriseInfo)o).getHZRQ());
-		}
-
 		System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
 		return arr;
 	}
