@@ -8,6 +8,12 @@ import com.gzmd.domain.EnterpriseInfo;
 import com.gzmd.utils.CompareCNUtils;
 import com.gzmd.utils.DateUtils;
 
+/**
+ * πÈ≤¢≈≈–ÚÀ„∑®
+ * 
+ * @author Meran
+ *
+ */
 public class MergeSort {
 	
 	/**

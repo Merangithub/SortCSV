@@ -31,7 +31,7 @@ public class ReadCSV {
 		try {
 
 			list = new LinkedList<EnterpriseInfo>();
-			fr = new FileReader("E:\\A_QYZT.csv");
+			fr = new FileReader("D:\\A_QYZT.csv");
 			br = new BufferedReader(fr);
 			br.readLine();// 读取行头
 			int lineNum = 0;
@@ -189,20 +189,5 @@ public class ReadCSV {
 		}
 
 		return list;
-		// BubbleSort bs = new BubbleSort();
-		// bs.bubbleSort(list);
 	}
-
-	// /**
-	// * 两数组合成一个数组
-	// * @param a
-	// * @param b
-	// * @return
-	// */
-	// public String[] combine(String[] a, String[] b) {
-	// String[] c = new String[a.length + b.length];
-	// System.arraycopy(a, 0, c, 0, a.length);
-	// System.arraycopy(b, 0, c, a.length, b.length);
-	// return c;
-	// }
 }
