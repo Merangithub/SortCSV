@@ -5,14 +5,23 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 将String类型转换成Date类型，由于有的日期中，月和日只有一位数比如：2018/7/25
- * 其中月份就只有一个7，导致不能通过SimpleDateFormat的parse()方法解析成日期
- * 此工具类就将这些日期在年份不足四位数，月份日期分别不足两位数时，在其前面添0,来满足 parse()方法的解析条件。
+ * 将String类型日期转换成Date类型日期
  * 
  * @author Meran
  *
  */
 public class DateUtils {
+	
+	/**
+	 * 
+	 * 由于有的日期中，月和日只有一位数比如：2018/7/25
+	 * 其中月份就只有一个7，导致不能通过SimpleDateFormat的parse()方法解析成日期
+	 * 此工方法就将这些日期在年份不足四位数，月份日期分别不足两位数时，在其前面添0,来满足 parse()方法的解析条件。
+	 * 
+	 * @param str
+	 * 			待转换的String类型的日期
+	 * @return	Date类型的日期
+	 */
 	public Date parseDate(String str) {
 		Date date = null; // 接收解析后的日期变量
 		String[] s = new String[10];

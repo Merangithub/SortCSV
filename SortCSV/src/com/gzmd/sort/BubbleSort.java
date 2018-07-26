@@ -22,9 +22,9 @@ public class BubbleSort {
 	 * 对EnterpriseInfo类型的List集合进行冒泡排序
 	 * 
 	 * @param list
-	 *          EnterpriseInfo类型的List集合
+	 *            EnterpriseInfo类型的List集合
 	 * @param column
-	 * 			选择指定的字段排序
+	 *            按照指定的字段排序
 	 * @return 排好序的List集合
 	 */
 
@@ -32,8 +32,9 @@ public class BubbleSort {
 
 		EnterpriseInfo temp = null;
 		switch (column) {
+		// 内部序号
 		case 1:
-			
+
 			System.out.println("排序后：");
 			for (int i = 0; i < list.size() - 1; i++) {
 				for (int j = 0; j < list.size() - 1 - i; j++) {
@@ -46,6 +47,7 @@ public class BubbleSort {
 			}
 
 			break;
+		// 注册资本
 		case 2:
 
 			System.out.println("排序后：");
@@ -57,16 +59,17 @@ public class BubbleSort {
 						list.set(j + 1, temp);
 					}
 				}
-			} 
+			}
 
 			break;
+		// 核准日期
 		case 3:
-			
+
 			DateUtils du = new DateUtils();
 			System.out.println("排序后：");
 			for (int i = 0; i < list.size() - 1; i++) {
 				for (int j = 0; j < list.size() - 1 - i; j++) {
-					//将字符串转换成Date类型
+					// 将字符串转换成Date类型
 					Date date1 = du.parseDate(list.get(j).getHZRQ());
 					Date date2 = du.parseDate(list.get(j + 1).getHZRQ());
 					if (date2.before(date1)) {
@@ -75,11 +78,12 @@ public class BubbleSort {
 						list.set(j + 1, temp);
 					}
 				}
-			} 
-			
+			}
+
 			break;
+		// 企业名称
 		case 4:
-			
+
 			CompareCNUtils cu = new CompareCNUtils();
 			System.out.println("排序后：");
 			for (int i = 0; i < list.size() - 1; i++) {
@@ -90,14 +94,13 @@ public class BubbleSort {
 						list.set(j + 1, temp);
 					}
 				}
-			} 
-			
+			}
+
 			break;
 		}
 
-		
 		return list;
-		
+
 		///////////////////////////////////////////////////////////////////////////////
 		// 第通过将集合转换成数组，对数组排序，以达到对原集合排序的目的
 		//

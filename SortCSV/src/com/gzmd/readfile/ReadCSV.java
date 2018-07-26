@@ -13,9 +13,7 @@ import com.gzmd.domain.EnterpriseInfo;
 import com.gzmd.sort.BubbleSort;
 
 /**
- * 
- * 步骤： 1、从本地读取csv文件 2、对文件格式进行规范化，比如不该出现换行符的地方出现了换行符
- * 3、把读取到内存的数据封装到类里面，然后加到List集合去 4、用算法对集合进行排序 5、把有序的集合写到新的csv文件里面
+ * 将读取到的数据封装到实体里面
  * 
  * @author Meran
  *
@@ -27,11 +25,17 @@ public class ReadCSV {
 	LinkedList<EnterpriseInfo> list;
 	EnterpriseInfo ei;
 
+	/**
+	 * 读csv文件，并将读取到的每一行数据以","切分，以便得到每个字段的值，然后分别将不同字段的
+	 * 数据封装到实体对象对应的属性里，最后将对象存入EnterpriseInfo类型的LinkedList集合中。
+	 * 
+	 * @return	EnterpriseInfo类型的LinkedList集合
+	 */
 	public LinkedList<EnterpriseInfo> readFile() {
 		try {
 
 			list = new LinkedList<EnterpriseInfo>();
-			fr = new FileReader("D:\\A_QYZT.csv");
+			fr = new FileReader("E:\\A_QYZT.csv");
 			br = new BufferedReader(fr);
 			br.readLine();// 读取行头
 			int lineNum = 0;
@@ -59,7 +63,7 @@ public class ReadCSV {
 					}
 				} while (true);
 
-				newLine = sb.toString().split("\",\"");// 以 "," 为分隔符
+				newLine = sb.toString().split("\",\"");// 以 "," 这三个连续符号作为分隔符
 
 				// 这种方法是直接将不完整的两行忽略掉
 				// newLine = line.split(",");
